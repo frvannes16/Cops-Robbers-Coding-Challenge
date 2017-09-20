@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    {% load static %}
+    <title>Cops And Robbers</title>
+    <link rel="stylesheet" type="text/css" href="{% static "challenge/bootstrap.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static "challenge/style.css" %}">
+  </head>
+  <body>
+      <div class="container">
+        <h1 class="my-center">Cops and Robbers!</h1>
+        <h2 class="my-center" id="main">{{ cops.name }} vs. {{ robbers.name }}</h2>
+        <h2 class="my-center"><span id="cop-score">0</span> - <span id="robber-score">0</span></h2>
+        <h3 id="event"></h3>
+    </div>
+    <div class="game" style="position: relative">
+	    <canvas id="mainCanvas" style="position:absolute;" width="900" height="900"></canvas>
+    </div>
+    <script type="text/javascript">
+        const wsHost = "{{ ws_host }}";
+        const httpHost = "{{ http_host }}";
+        var cop_code = "{{ cops.code }}";
+        var robber_code = "{{ robbers.code }}";
+        var images_url = "{% static "challenge/images/" %}";
+    </script>
+    <script type="text/javascript" src="{% static "challenge/jquery-3.2.1.min.js" %}"></script>
+    <script type="text/javascript" src="{% static "challenge/reconnecting-websocket.min.js" %}"></script>
+    <script type="text/javascript" src="{% static "challenge/game.js" %}"></script>
+  </body>
+</html>

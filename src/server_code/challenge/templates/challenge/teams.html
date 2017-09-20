@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Teams | Cops and Robbers</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static "challenge/bootstrap.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static "challenge/style.css" %}">
+  </head>
+  <body>
+    <div class="container">
+        <h1>Cops &amp; Robbers</h1>
+        <br><br>
+        <h2>Guide</h2>
+        <p>So it's easy to find, the primary command is <code>python main.py [opposing team code]</code></p>
+        <p>If your are the Cops, then you have to find the robbers before they rob the banks.
+         If you are the Robbers, then you are responsible for for robbing the banks without getting caught.</p>
+
+        <h2>Links to Code</h2>
+            <p><a href="{{ settings.robbers_code_link }}">Code for Robbers</a></p>
+            <p><a href="{{ settings.cops_code_link }}">Code for Cops</a></p>
+            <br>
+            <br>
+        <h2>Code Setup</h2>
+          <p>Step 1. - Sign up your team below.</p>
+          <p>Step 2. - Find your team type and download the respective code from the links above.</p>
+          <p>Step 3. - Unzip the files. Open controller.py and change the TEAM_CODE to your team code.
+           controller.py is the only file that you will have to edit.</p>
+          <p>Step 4. - Run the program against somebody else's code. To do this, find another team that has a different
+            role than you (COPS vs. ROBBERS). Note their team code, as you will be playing against each other. Use the list below to help.</p>
+          <p> Step 5. - Each team should run the following command: <code>python main.py [other team's code]</code></p>
+          <p>Step 6. - A browser tab should open with your game in view. Now you're playing cops and robbers!</p>
+          <br>
+          <br>
+        <h2>Teams</h2>
+        <em><a href="{% url 'challenge:team-form'%}">Create a team!</a></em>
+        <br>
+        <table class="table table-striped">
+          <tr>
+            <th>Team Name</th>
+            <th>Cops/Robbers</th>
+            <th>Team Code</th>
+            <th>Members</th>
+          </tr>
+        {% for team in teams %}
+        <tr>
+          <td>{{ team.name }}</td>
+          <td>{{ team.team_type }}</td>
+          <td>{{ team.code }}</td>
+          <td>{% for member in team.member_set.all %}{{member.name}}, {% endfor %}</td>
+        </tr>
+        {% endfor %}
+      </table>
+  </div>
+  </body>
+</html>

@@ -1,0 +1,5 @@
+channels==1.1.6
+asgi-redis==1.4.2
+DJango==1.11.4
+django-redis
+mysqlclient

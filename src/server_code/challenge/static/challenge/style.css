@@ -1,0 +1,15 @@
+h1 {
+    margin-bottom: 100px;
+}
+
+.game {
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.my-center {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
