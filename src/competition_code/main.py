@@ -12,11 +12,11 @@ from controller import (TEAM_CODE,
                         Controller,)
 
 
-SERVER_URL = 'http://35.194.64.176'
+SERVER_URL = os.environ.get('COPS_AND_ROBBERS_HOST') + '/'
 
 
 def main():
-    url = "http://35.194.64.176/"
+    url = SERVER_URL
     args = sys.argv[1:]
     if TEAM_CODE == '':
         print('Please enter your team code in the TEAM_CODE variable in controller.py')
