@@ -4,6 +4,8 @@ _Cops & Robbers_ is a competitive coding challenge that tests your knowledge of 
 
 This coding challenge was created in 25 days in preparation for Colgate University's Prep for Tech event. The challenge was incredibly well received, with some students excited to continue building out their solution at home. Every student had designed a solution, and everybody had learned something interesting.
 
+To play the game, I have a demo running at [cops-n-robbers.franklinvannes.com](cops-n-robbers.franklinvannes.com). Create a team (or two) and follow the instructions to get started.
+
 
 ## Design
 _Cops & Robbers_ is built upon the Django-channels web framework. I used the channels component to set up web socket connections between the server and the browser clients displaying the game. This means that when a game is running, it can be "livestreamed" to any client that choose to watch. The movement information as determined by the participant code is sent via http requests to and from the server and the participant's computer.
