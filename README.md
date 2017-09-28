@@ -6,9 +6,12 @@ This coding challenge was created in 25 days in preparation for Colgate Universi
 
 To play the game, I have a demo running at [cops-n-robbers.franklinvannes.com](http://cops-n-robbers.franklinvannes.com). Create a team (or two) and follow the instructions to get started.
 
+## Example game (old image)
+[The main game screen.](https://storage.googleapis.com/personal-website-f0d12.appspot.com/2017-09-16.png)
+
 
 ## Design
-_Cops & Robbers_ is built upon the Django-channels web framework. I used the channels component to set up web socket connections between the server and the browser clients displaying the game. This means that when a game is running, it can be "livestreamed" to any client that choose to watch. The movement information as determined by the participant code is sent via http requests to and from the server and the participant's computer.
+_Cops & Robbers_ is built upon the Django-channels web framework. I used the channels component to set up web socket connections between the server and the browser clients displaying the game. This means that when a game is running, it can be "livestreamed" to any client that chooses to watch. The movement information as determined by the participant code is sent via http requests to and from the server and the participant's computer.
 
 Because of this design, participants can run code against each other in real-time, allowing them to debug during a game, should they choose to do so. Also, this design allows us to scale nicely.
 
