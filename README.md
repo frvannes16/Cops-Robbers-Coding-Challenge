@@ -7,7 +7,7 @@ This coding challenge was created in 25 days in preparation for Colgate Universi
 To play the game, I have a demo running at [cops-n-robbers.franklinvannes.com](http://cops-n-robbers.franklinvannes.com). Create a team (or two) and follow the instructions to get started.
 
 ## Example game (old image)
-[The main game screen.](https://storage.googleapis.com/personal-website-f0d12.appspot.com/2017-09-16.png)
+![The main game screen.](https://storage.googleapis.com/personal-website-f0d12.appspot.com/2017-09-16.png "The game board")
 
 
 ## Design
